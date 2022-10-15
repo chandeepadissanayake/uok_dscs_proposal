@@ -10,14 +10,18 @@
 
 \usepackage{times}
 \usepackage[a4paper, total={6in, 8in}, margin=1.0in]{geometry}
+\usepackage[style=ieee]{biblatex}
 \parindent 0pt
 
-% Change the following lines to suit your research project
+% IMPORTANT: Change the following lines to suit your research project
+
 \newcommand{\provisionalTitle}{Provisional Project Title Here}
 \newcommand{\studentName}{Student Name}
 \newcommand{\studentNumber}{Student Number}
 \newcommand{\supervisorName}{Supervisor Name}
 \newcommand{\courseCode}{Course Code}
+% Replace either "BibTeXFileName.bib" with the file name of the file containing the references or simply replace the file itself with the same name and leave this field as it is. You can, for instance, export BibTeX file from Zotero or Mendeley.
+\newcommand{\bibTeXs}{BibTeXFileName.bib}
 
 % Contents of the Sections
 % Introduction Section
@@ -40,12 +44,13 @@
     Content goes here.
 }
 
-% Bibliography Section
-\newcommand{\sectionContentBibliography}{
-    Content goes here.
-}
+% IMPORTANT: Do not change formatting below this line.
 
-% Do not change formatting below this line.
+% Bibliography Section
+\bibliography{\bibTeXs}
+\newcommand{\sectionContentBibliography}{
+    \printbibliography[heading=none]
+}
 
 \title{
     \thispagestyle{empty}
